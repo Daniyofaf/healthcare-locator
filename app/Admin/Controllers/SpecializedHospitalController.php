@@ -9,6 +9,7 @@ use OpenAdmin\Admin\Show;
 use \App\Models\SpecializedHospital;
 use App\Models\Service;
 use App\Models\Status;
+use App\Models\Location;
 
 class SpecializedHospitalController extends AdminController
 {
@@ -113,8 +114,22 @@ class SpecializedHospitalController extends AdminController
         $form->text('sh_name', __('SpecializedHospital name'));
         $services = Service::pluck('s_name', 's_name');
         $form->multipleSelect('Service', __('Service'))->options($services);  
-        $form->text('Region', __('Region/City'));
-        $form->text('Zone', __('Zone/Sub-City'));
+
+        // $form->text('Status', __('Status'));
+        $status = Status::pluck('st_name', 'st_name');
+        $form->select('Status', __('Status'))
+            ->options($status)
+            ->default(1); // Set the default option
+
+      // $form->text('Region', __('Region/City'));
+      $regions = Location::distinct('Region')->pluck('Region', 'Region');
+
+      $form->select('Region', __('Region/City'))->options($regions);
+
+      // $form->text('Zone', __('Zone/Sub-City'));
+      $zone = Location::distinct('Zone')->pluck('Zone', 'Zone');
+
+      $form->select('Zone', __('Zone/Sub-City'))->options($zone);
         $form->text('Wereda', __('Wereda/Unique-Area'));
         // $form->text('Latitude', __('Latitude'));
         // $form->text('Longitude', __('Longitude'));
@@ -126,8 +141,8 @@ class SpecializedHospitalController extends AdminController
         // $form->text('Service', __('Service'));
 
         // $form->text('Status', __('Status'));
-        $status = Status::pluck('st_name', 'st_name');
-        $form->multipleSelect('Status', __('Status'))->options($status); 
+        // $status = Status::pluck('st_name', 'st_name');
+        // $form->multipleSelect('Status', __('Status'))->options($status); 
 
         return $form;
     }

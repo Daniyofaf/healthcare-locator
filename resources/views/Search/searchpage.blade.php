@@ -365,6 +365,8 @@
 
             @endforeach
 
+            
+
             @else
             <p class="no-results-message"></p>
 

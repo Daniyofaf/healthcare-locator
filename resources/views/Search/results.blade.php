@@ -34,6 +34,9 @@
                     </script>
                 </div>
             @endforeach
+
+
+            
         @else
             <p class="no-results-message">No results found.</p>
         @endif

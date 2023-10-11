@@ -60,6 +60,15 @@ class ClinicController extends AdminController
             return $status;
         });
 
+        // $grid->column('Status', __('Status'))->display(function ($status) {
+        //     if (is_array($status)) {
+        //         return implode(', ', $status);
+        //     } else {
+        //         return $status;
+        //     }
+        // });
+        
+
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -95,8 +104,12 @@ class ClinicController extends AdminController
         // $show->field('Status', __('Status'));
         $statusArray = $show->getModel()->Status;
 
-        $formattedStatuses = implode(', ', $statusArray);
-       
+        if (is_array($statusArray)) {
+            $formattedStatuses = implode(', ', $statusArray);
+        } else {
+            $formattedStatuses = $statusArray;
+        }
+        
         $show->field('Status', __('Status'))->as(function () use ($formattedStatuses) {
             return $formattedStatuses;
         });

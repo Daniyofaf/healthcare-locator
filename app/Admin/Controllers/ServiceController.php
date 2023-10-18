@@ -26,8 +26,8 @@ class ServiceController extends AdminController
     {
         $grid = new Grid(new Service());
 
-        $grid->column('s_id', __('S id'));
-        $grid->column('s_name', __('S name'));
+        $grid->column('s_id', __('Service id'));
+        $grid->column('s_name', __('Service Name'));
         // $grid->column('s_description', __('S description'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
@@ -45,8 +45,8 @@ class ServiceController extends AdminController
     {
         $show = new Show(Service::findOrFail($id));
 
-        $show->field('s_id', __('S id'));
-        $show->field('s_name', __('S name'));
+        $show->field('s_id', __('Service id'));
+        $show->field('s_name', __('Service Name'));
         // $show->field('s_description', __('S description'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
@@ -63,7 +63,7 @@ class ServiceController extends AdminController
     {
         $form = new Form(new Service());
 
-        $form->text('s_name', __('S name'));
+        $form->text('s_name', __('Service Name'));
         // $form->text('s_description', __('S description'));
 
         return $form;

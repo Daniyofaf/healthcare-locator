@@ -1,6 +1,11 @@
+This is Health care locator website for the ethiopian healthcare organizations.
+With beatiful user inteface, you can search and access those healthcares by searching these healthcares in their name,service and location(Region,Zone,City,Unique Area,sub-city).
+
 #ScreenShots
 <img src="https://github.com/Daniyofaf/healthcare-locator/blob/main/Screenshot%202023-10-11%20143232.png">
-
+<img src="[https://github.com/Daniyofaf/healthcare-locator/blob/main/Screenshot%202023-10-11%20143232.png](https://github.com/Daniyofaf/healthcare-locator/blob/main/Screenshot%202023-10-11%20143702.png)">
+<img src="[https://github.com/Daniyofaf/healthcare-locator/blob/main/Screenshot%202023-10-11%20143232.png](https://github.com/Daniyofaf/healthcare-locator/blob/main/Screenshot%202023-10-11%20143519.png)">
+<img src="[https://github.com/Daniyofaf/healthcare-locator/blob/main/Screenshot%202023-10-11%20143232.png](https://github.com/Daniyofaf/healthcare-locator/blob/main/Screenshot%202023-10-11%20143412.png)">
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
